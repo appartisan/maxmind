@@ -20,4 +20,10 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/adam12/maxmind"
   s.require_paths = ["lib"]
   s.summary = "Wrapper for MaxMind's minFraud service"
+
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'mocha'
+  s.add_development_dependency 'webmock'
+
+  s.add_runtime_dependency 'activesupport'
 end
