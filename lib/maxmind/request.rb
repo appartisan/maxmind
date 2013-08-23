@@ -75,14 +75,14 @@ module Maxmind
 
       required_fields = {
         :i                => @client_ip,
-        :city             => @city,
-        :region           => @region,
-        :postal           => @postal,
         :country          => @country,
         :license_key      => Maxmind::license_key
       }
 
       optional_fields = {
+        :city             => @city,
+        :region           => @region,
+        :postal           => @postal,
         :domain           => @domain,
         :bin              => @bin,
         :binName          => @bin_name,
@@ -152,9 +152,6 @@ module Maxmind
     def validate
       raise ArgumentError, 'License key is required' unless Maxmind::license_key
       raise ArgumentError, 'IP address is required' unless client_ip
-      raise ArgumentError, 'City is required' unless city
-      raise ArgumentError, 'Region is required' unless region
-      raise ArgumentError, 'Postal code is required' unless postal
       raise ArgumentError, 'Country is required' unless country
     end
   end

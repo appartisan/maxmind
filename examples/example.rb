@@ -2,14 +2,14 @@ require 'pp'
 require File.join(File.dirname(__FILE__), '..', 'lib/maxmind')
 
 required_fields = {
-  :client_ip => '24.24.24.24', 
-  :city => 'New York', 
-  :region => 'NY', 
-  :postal => '11434', 
+  :client_ip => '24.24.24.24',  
   :country => 'US'
 }
 
 recommended_fields = {
+  :city => 'New York',
+  :region => 'NY',
+  :postal => '11434',
   :domain => 'yahoo.com',
   :bin => '549099',
   :forwarded_ip => '24.24.24.25',
